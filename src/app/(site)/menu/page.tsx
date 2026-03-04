@@ -44,11 +44,9 @@ export default function MenuPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-charcoal-600">
             <span className="font-medium">Dietary guide:</span>
+            <span><span className="font-semibold text-forest-600">V</span> Vegetarian</span>
             <span><span className="font-semibold text-forest-600">VG</span> Vegetarian</span>
-            <span><span className="font-semibold text-forest-600">V</span> Vegan</span>
-            <span><span className="font-semibold text-birch-600">GF</span> Gluten Free</span>
-            <span><span className="font-semibold text-birch-600">GFO</span> GF Option Available</span>
-            <span><span className="font-semibold">DF</span> Dairy Free</span>
+            <span><span className="font-semibold text-birch-600">GFO</span> Gluten Free Option</span>
             <span className="text-charcoal-600/60 ml-auto">
               Please advise us of allergies when ordering.
             </span>
@@ -98,11 +96,14 @@ export default function MenuPage() {
       {/* Allergen notice */}
       <section className="bg-mist border-t border-mist-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
-          <p className="text-sm text-charcoal-600 max-w-2xl mx-auto">
+          <p className="text-sm text-charcoal-600 max-w-2xl mx-auto mb-3">
             <strong>Allergen notice:</strong> Our kitchen handles nuts, gluten,
             dairy, eggs, and other allergens. Please inform our staff of any
             dietary requirements or allergies before ordering. Menu items and
             prices are subject to change without notice.
+          </p>
+          <p className="text-sm font-medium text-charcoal-700">
+            15% surcharge applies on Public Holidays.
           </p>
         </div>
       </section>

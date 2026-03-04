@@ -9,111 +9,120 @@ export const MENU: MenuCategory[] = [
       {
         id: "eggs",
         title: "Eggs Your Way",
-        subtitle:
-          "Served with grilled tomato & toasted Turkish bread",
+        subtitle: "Served with grilled tomato & toasted Turkish bread",
         items: [
           {
-            id: "eggs-classic",
-            name: "Classic",
-            price: 15,
+            id: "eggs-your-way",
+            name: "Eggs Your Way",
             tags: ["VG", "GFO"],
-            featured: false,
-          },
-          {
-            id: "eggs-bacon",
-            name: "With Bacon or Boneless Ham",
-            price: 19,
-            tags: ["GFO"],
-          },
-          {
-            id: "eggs-avo",
-            name: "With Avocado or Mushrooms",
-            price: 19,
-            tags: ["VG", "GFO"],
-          },
-          {
-            id: "eggs-salmon",
-            name: "With Salmon",
-            price: 22,
-            tags: ["GFO"],
+            variants: [
+              { label: "Classic", price: 15 },
+              { label: "With Bacon or Boneless Ham", price: 19 },
+              { label: "With Avocado or Mushrooms", price: 19 },
+              { label: "With Salmon", price: 22 },
+            ],
           },
         ],
       },
       {
         id: "wraps",
-        title: "Wraps & Burgers",
+        title: "Wrap / Burger",
         items: [
           {
             id: "brekkie-wrap",
             name: "Brekkie Wrap",
             description:
-              "Bacon, fried egg, hashbrowns, tomato or BBQ sauce",
+              "Bacon, fried egg, hashbrowns & your choice of Tomato or BBQ sauce",
             price: 20,
           },
           {
-            id: "veggie-wrap",
-            name: "Veggie Wrap",
+            id: "avo-toast",
+            name: "Smashed Avo",
             description:
-              "Grilled mushrooms, avocado, spinach, tomato, aioli",
-            price: 18,
+              "Avocado, feta, tomatoes on toasted Turkish bread with balsamic glaze. Add 2 poached eggs +$6",
+            price: 20,
+            tags: ["VG", "GFO"],
+            featured: true,
+          },
+          {
+            id: "brekkie-burger",
+            name: "Brekkie Burger",
+            description:
+              "Bacon, fried egg, hashbrowns, onion, cheese & your choice of Tomato or BBQ sauce",
+            price: 25,
+          },
+          {
+            id: "vegan-breakfast",
+            name: "Vegan Breakfast",
+            description:
+              "Toasted English muffin with Avocado, grilled tomato, spinach, smokey kale/Quinoa Pattie and relish",
+            price: 25,
+            tags: ["V", "VG", "GFO"],
+          },
+        ],
+      },
+      {
+        id: "benedict",
+        title: "Benedict / Omelette",
+        items: [
+          {
+            id: "eggs-benedict",
+            name: "Eggs Benedict",
+            description:
+              "Poached eggs, spinach & hollandaise sauce on toasted English muffin",
             tags: ["VG"],
+            variants: [
+              { label: "Classic", price: 20 },
+              { label: "With Bacon or Boneless Ham", price: 24 },
+              { label: "With Salmon", price: 25 },
+            ],
+          },
+          {
+            id: "omelette",
+            name: "Create Your Own Omelette",
+            description:
+              "Choose 3 ingredients: Boneless ham, Cheese, Tomato, Bacon, Spinach, Sundried Tomato, Onion, Fetta or Mushroom. Served with toasted ciabatta bread",
+            tags: ["VG", "GFO"],
+          },
+          {
+            id: "savory-mince",
+            name: "Savory Mince",
+            description: "Savory mince with 2 poached eggs & toasted Turkish bread",
+            price: 20,
           },
         ],
       },
       {
         id: "bowls",
-        title: "Bowls & Porridge",
+        title: "Bowls / Kids",
         items: [
           {
+            id: "greek-yogurt-bowl",
+            name: "Greek Yogurt Bowl",
+            description: "Greek yogurt, homemade granola & seasonal fruits",
+            price: 18,
+            tags: ["VG"],
+          },
+          {
             id: "acai-bowl",
-            name: "Açaí Bowl",
+            name: "Acai Bowl",
             description:
-              "Blended açaí, banana, granola, seasonal fruits, honey",
-            price: 17,
-            tags: ["VG", "GF"],
+              "Acai, homemade granola, seasonal fruit, chia seeds & coconut flakes. Add Peanut Butter or Nutella +$2",
+            price: 18,
+            tags: ["VG"],
           },
           {
             id: "porridge",
-            name: "Nordic Porridge",
-            description:
-              "Creamy oats with cinnamon, brown sugar, seasonal berries, and cream",
-            price: 14,
-            tags: ["VG"],
-          },
-        ],
-      },
-      {
-        id: "vegan",
-        title: "Vegan Plates",
-        items: [
-          {
-            id: "avo-toast",
-            name: "Avocado Toast",
-            description:
-              "Smashed avocado on grilled sourdough, crowned with cherry tomatoes, dukkah, lemon zest and a drizzle of cold-pressed olive oil",
+            name: "Creamy Oat Porridge",
+            description: "With seasonal fruit, honey & milk on the side",
             price: 18,
-            tags: ["VG", "V", "DF"],
-            featured: true,
-          },
-        ],
-      },
-      {
-        id: "kids",
-        title: "Kids Menu",
-        subtitle: "For our little Vikings",
-        items: [
-          {
-            id: "kids-eggs",
-            name: "Kids Eggs on Toast",
-            price: 9,
             tags: ["VG"],
           },
           {
-            id: "kids-pancakes",
-            name: "Mini Pancakes",
-            description: "With maple syrup and fresh berries",
-            price: 10,
-            tags: ["VG"],
+            id: "kids-bacon-egg",
+            name: "Kids Bacon & Egg",
+            description: "One bacon, one egg & one toast. Add Hashbrown +$4",
+            price: 14,
           },
         ],
       },
@@ -125,213 +134,112 @@ export const MENU: MenuCategory[] = [
     availableNote: "Available All Day",
     sections: [
       {
-        id: "sandwiches",
-        title: "Sandwiches & Bagels",
+        id: "mains",
+        title: "Main",
         items: [
-          {
-            id: "smoked-salmon-bagel",
-            name: "Smoked Salmon Bagel",
-            description:
-              "Cream cheese, capers, dill, red onion, cucumber",
-            price: 19,
-          },
           {
             id: "chicken-club",
-            name: "Chicken Club Sandwich",
+            name: "Club Sandwich",
             description:
-              "Toasted Turkish bread layered with grilled chicken breast, crispy bacon, fresh cos lettuce, ripe tomato and house-made aioli",
-            price: 18,
+              "Chicken breast, crispy bacon, lettuce, tomato, cheese & aioli dressing. Served with fries",
+            price: 25,
+            tags: ["GFO"],
             featured: true,
           },
           {
-            id: "veggie-bagel",
-            name: "Veggie Bagel",
-            description: "Hummus, roasted capsicum, spinach, feta, avocado",
-            price: 16,
-            tags: ["VG"],
-          },
-        ],
-      },
-      {
-        id: "hot-meals",
-        title: "Hot Meals",
-        items: [
-          {
-            id: "eggs-benny",
-            name: "Eggs Benedict",
-            description:
-              "Poached eggs, hollandaise, smoked salmon or bacon on English muffin",
-            price: 22,
-          },
-          {
-            id: "frittata",
-            name: "Seasonal Frittata",
-            description: "Ask our staff for today's selection",
-            price: 17,
-            tags: ["VG", "GF"],
-          },
-        ],
-      },
-      {
-        id: "soup",
-        title: "Soup",
-        subtitle: "Ask our staff for today's selection",
-        items: [
-          {
-            id: "soup-of-day",
-            name: "Soup of the Day",
-            description: "Served with freshly baked bread",
-            price: 14,
-          },
-        ],
-      },
-      {
-        id: "toasties",
-        title: "Toasties",
-        items: [
-          {
-            id: "ham-cheese",
-            name: "Ham & Cheese Toastie",
-            price: 12,
-          },
-          {
-            id: "veggie-toastie",
-            name: "Veggie Toastie",
-            description: "Mushroom, spinach, mozzarella",
-            price: 12,
-            tags: ["VG"],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: "extras",
-    label: "Extras & Treats",
-    sections: [
-      {
-        id: "pastries",
-        title: "Nordic Pastries & Bakery",
-        subtitle: "Freshly baked daily",
-        items: [
-          {
-            id: "kanelsnurre",
-            name: "Kanelsnurre",
-            description:
-              "Warm Nordic cinnamon swirl — a Scandinavian classic",
-            price: 6,
-            tags: ["VG"],
-            featured: true,
-          },
-          {
-            id: "carrot-cake",
-            name: "Nordic Carrot Cake",
-            description: "Moist and perfectly spiced with cream cheese frosting",
-            price: 7,
-            tags: ["VG"],
-          },
-          {
-            id: "droemmekage",
-            name: "Drømmekage",
-            description:
-              "Classic Danish dream cake with toasted coconut topping",
-            price: 7,
-            tags: ["VG"],
-          },
-          {
-            id: "scone",
-            name: "Scone with Jam & Cream",
-            description: "Freshly baked, served warm",
-            price: 6,
-            tags: ["VG"],
+            id: "lasagne",
+            name: "Lasagne of the Day",
+            description: "Beef mince. Add chips or salad +$5",
+            price: 13,
           },
           {
             id: "quiche",
-            name: "House Quiche",
-            description: "Ask our staff for today's selection",
-            price: 8,
-          },
-          {
-            id: "croissant",
-            name: "Butter Croissant",
-            price: 5,
+            name: "Quiche of the Day",
+            description: "Vegetarian or with Ham. Add chips or salad +$5",
+            price: 11,
             tags: ["VG"],
           },
         ],
       },
       {
-        id: "drinks",
-        title: "Coffee & Drinks",
+        id: "bagels",
+        title: "Bagels / Soup / Toasties",
         items: [
           {
-            id: "espresso",
-            name: "Espresso",
-            price: 4,
+            id: "salmon-bagel",
+            name: "Salmon Bagel",
+            description: "Cream cheese, salmon, red onion & cucumber",
+            price: 20,
           },
           {
-            id: "latte",
-            name: "Latte / Flat White / Cappuccino",
-            price: 5,
+            id: "avocado-bagel",
+            name: "Avocado Bagel",
+            description:
+              "Cream cheese, avocado, red onion, spinach and tomato",
+            price: 17,
+            tags: ["VG"],
           },
           {
-            id: "cold-brew",
-            name: "Cold Brew Coffee",
-            price: 6,
+            id: "chicken-bagel",
+            name: "Chicken Bagel",
+            description:
+              "Cream cheese, chicken breast, red onion, lettuce & pesto/mayo",
+            price: 18,
           },
           {
-            id: "tea",
-            name: "Loose-Leaf Tea",
-            description: "Ask our staff for today's selection",
-            price: 4,
-            tags: ["VG", "GF", "DF"],
+            id: "soup-of-day",
+            name: "Soup of the Day",
+            description: "Served with bread",
+            price: 18,
+            tags: ["VG", "GFO"],
           },
           {
-            id: "juice",
-            name: "Fresh-Squeezed Juice",
-            description: "Orange or seasonal blend",
-            price: 7,
-            tags: ["VG", "GF", "DF"],
-          },
-          {
-            id: "smoothie",
-            name: "Smoothie",
-            description: "Ask our staff for today's blend",
-            price: 8,
-            tags: ["VG", "GF", "DF"],
+            id: "toasties",
+            name: "Create Your Own Toasties",
+            description:
+              "Choose 3 ingredients: Boneless Ham, Cheese, Tomato, Chicken, Avocado or Onion. Extra ingredients +$2",
+            price: 12,
           },
         ],
       },
       {
         id: "sides",
-        title: "Sides",
+        title: "Extras / Sides",
         items: [
+          {
+            id: "extra-bread",
+            name: "Any Extra Bread incl. Gluten Free",
+            price: 2,
+          },
+          {
+            id: "hollandaise",
+            name: "Hollandaise",
+            price: 2,
+          },
           {
             id: "extra-egg",
             name: "Extra Egg",
             price: 3,
           },
           {
-            id: "extra-bacon",
-            name: "Extra Bacon / Ham",
+            id: "tomato-beans-hash",
+            name: "Grilled or Fresh Tomato, Baked Beans or Hashbrowns",
             price: 4,
           },
           {
-            id: "hashbrown",
-            name: "Hashbrown",
-            price: 3,
-            tags: ["VG"],
+            id: "avo-mushrooms",
+            name: "Avocado or Mushrooms",
+            price: 5,
           },
           {
-            id: "toast",
-            name: "Toast (2 slices)",
-            price: 3,
-            tags: ["VG"],
+            id: "halloumi-ham-bacon",
+            name: "Halloumi, Boneless Ham or Bacon",
+            price: 6,
           },
           {
-            id: "extra-avo",
-            name: "Avocado",
-            price: 4,
-            tags: ["VG", "GF", "DF"],
+            id: "smoked-salmon-side",
+            name: "Smoked Salmon",
+            price: 8,
           },
         ],
       },
@@ -350,8 +258,8 @@ export function getCategoryById(id: string): MenuCategory | undefined {
 export const DIETARY_LABELS: Record<string, string> = {
   VG: "Vegetarian",
   V: "Vegan",
+  GFO: "Gluten Free Option",
   GF: "Gluten Free",
-  GFO: "GF Option",
   DF: "Dairy Free",
   N: "Contains Nuts",
 };

@@ -38,7 +38,7 @@ export function MenuItemCard({ item, className }: MenuItemCardProps) {
         </h3>
         {price !== undefined && !variants && (
           <span className="shrink-0 font-body font-semibold text-forest-600 text-base">
-            ${price.toFixed(2)}
+            ${price}
           </span>
         )}
       </div>
@@ -60,7 +60,7 @@ export function MenuItemCard({ item, className }: MenuItemCardProps) {
             >
               <span className="text-sm text-charcoal-600">{variant.label}</span>
               <span className="text-sm font-semibold text-forest-600">
-                ${variant.price.toFixed(2)}
+                ${variant.price}
               </span>
             </div>
           ))}
