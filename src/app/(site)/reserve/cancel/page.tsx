@@ -14,7 +14,7 @@ interface PageProps {
 async function cancelReservation(token: string): Promise<{ ok: boolean; error?: string }> {
   try {
     const baseUrl =
-      process.env.NEXT_PUBLIC_SITE_URL ?? "https://nordicdeli.anchornetwork.ai";
+      process.env.NEXT_PUBLIC_SITE_URL ?? "https://nordicdeli-website.anchornetwork.workers.dev";
     const res = await fetch(`${baseUrl}/api/reservations/cancel`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

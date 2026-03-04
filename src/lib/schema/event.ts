@@ -4,7 +4,7 @@ import type { EventData } from "@/types/event";
  * Builds a schema.org Event JSON-LD object.
  */
 export function buildEventSchema(event: EventData) {
-  const siteUrl = "https://nordicdeli.anchornetwork.ai";
+  const siteUrl = "https://nordicdeli-website.anchornetwork.workers.dev";
 
   // Build ISO datetime strings from date + time
   const startDateTime = `${event.date}T${event.time}:00+10:00`;

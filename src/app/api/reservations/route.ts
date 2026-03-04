@@ -177,7 +177,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 
     // 12. Build cancel URL
     const siteUrl =
-      process.env.NEXT_PUBLIC_SITE_URL ?? "https://nordicdeli.anchornetwork.ai";
+      process.env.NEXT_PUBLIC_SITE_URL ?? "https://nordicdeli-website.anchornetwork.workers.dev";
     const cancelUrl = `${siteUrl}/reserve/cancel?token=${encodeURIComponent(cancelToken)}`;
 
     // 13. Send emails (don't let email failure block confirmation)

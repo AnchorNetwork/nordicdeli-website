@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
-    sitemap: "https://nordicdeli.anchornetwork.ai/sitemap.xml",
+    sitemap: "https://nordicdeli-website.anchornetwork.workers.dev/sitemap.xml",
   };
 }

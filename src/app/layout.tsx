@@ -18,7 +18,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://nordicdeli.anchornetwork.ai"
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://nordicdeli-website.anchornetwork.workers.dev"
   ),
   title: {
     default: "The Nordic Deli | Café & Bakery · Hope Island, Gold Coast",

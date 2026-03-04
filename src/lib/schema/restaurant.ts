@@ -5,7 +5,7 @@ export function buildRestaurantSchema() {
     name: "The Nordic Deli",
     description:
       "Nordic-inspired café and deli serving Scandinavian pastries, eggs your way, and Hygge-style dining in Hope Island, Gold Coast, Australia.",
-    url: "https://nordicdeli.anchornetwork.ai",
+    url: "https://nordicdeli-website.anchornetwork.workers.dev",
     telephone: "+61420960821",
     email: "admin@thenordicdeli.com",
     address: {
@@ -38,12 +38,12 @@ export function buildRestaurantSchema() {
     servesCuisine: ["Nordic", "Scandinavian", "Café", "Bakery"],
     priceRange: "$$",
     currenciesAccepted: "AUD",
-    image: "https://nordicdeli.anchornetwork.ai/images/og/default.jpg",
-    hasMenu: "https://nordicdeli.anchornetwork.ai/menu",
+    image: "https://nordicdeli-website.anchornetwork.workers.dev/images/og/default.jpg",
+    hasMenu: "https://nordicdeli-website.anchornetwork.workers.dev/menu",
     acceptsReservations: "True",
     reservationAction: {
       "@type": "ReserveAction",
-      target: "https://nordicdeli.anchornetwork.ai/reserve",
+      target: "https://nordicdeli-website.anchornetwork.workers.dev/reserve",
     },
   };
 }

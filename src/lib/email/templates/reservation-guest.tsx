@@ -155,8 +155,8 @@ export function ReservationGuestEmail({
               The Nordic Deli · Shop 15/10 Santa Barbara Rd, Hope Island QLD 4212
             </Text>
             <Text style={footerText}>
-              <Link href="https://nordicdeli.anchornetwork.ai" style={footerLink}>
-                nordicdeli.anchornetwork.ai
+              <Link href="https://nordicdeli-website.anchornetwork.workers.dev" style={footerLink}>
+                nordicdeli-website.anchornetwork.workers.dev
               </Link>
             </Text>
             <Text style={footerMuted}>

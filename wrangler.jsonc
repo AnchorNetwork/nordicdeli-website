@@ -29,7 +29,7 @@
   // Rate limiting is implemented via KV (RESERVATIONS_KV) to support free Workers plan
   // and allow flexible window sizes (10min for reservations, 1h for phone, 5min for contact)
   "vars": {
-    "NEXT_PUBLIC_SITE_URL": "https://nordicdeli.anchornetwork.ai",
+    "NEXT_PUBLIC_SITE_URL": "https://nordicdeli-website.anchornetwork.workers.dev",
     "NEXT_PUBLIC_CF_TURNSTILE_SITE_KEY_CONTACT": "0x4AAAAAAClWAHs9hdnoQD4h",
     "NEXT_PUBLIC_CF_TURNSTILE_SITE_KEY_RESERVATIONS": "0x4AAAAAAClWHiNIPYAfYBna",
     "CF_WEB_ANALYTICS_TOKEN": "54145cb266594144a72347363ead4a3c"

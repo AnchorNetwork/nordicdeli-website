@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllEvents } from "@/lib/events";
 
-const BASE_URL = "https://nordicdeli.anchornetwork.ai";
+const BASE_URL = "https://nordicdeli-website.anchornetwork.workers.dev";
 const MENU_CATEGORIES = ["breakfast", "lunch", "extras"];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
