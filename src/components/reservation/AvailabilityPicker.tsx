@@ -37,11 +37,11 @@ export function AvailabilityPicker({
           `/api/reservations/availability?date=${encodeURIComponent(date)}&people=${people}`,
           { signal: controller.signal }
         );
-        const data = await res.json().catch(() => ({})) as { slots?: Slot[]; error?: string };
+        const data = await res.json().catch(() => ({})) as { slots?: string[]; error?: string };
         if (!res.ok) {
           throw new Error(data.error ?? "Failed to load availability.");
         }
-        setSlots(data.slots ?? []);
+        setSlots((data.slots ?? []).map((time) => ({ time, available: true })));
       } catch (err: unknown) {
         if (err instanceof Error && err.name === "AbortError") return;
         setError(err instanceof Error ? err.message : "Could not load available times.");

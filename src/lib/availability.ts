@@ -36,9 +36,10 @@ export async function computeAvailableSlots(
   date: string,
   env: { RESERVATIONS_KV: KVNamespace; SETTINGS_KV: KVNamespace }
 ): Promise<string[]> {
-  // Reject past dates
-  const today = new Date();
-  const todayStr = today.toISOString().slice(0, 10);
+  // Reject past dates (compare in AEST to avoid UTC offset issues)
+  const todayStr = new Date().toLocaleDateString("en-CA", {
+    timeZone: "Australia/Brisbane",
+  });
   if (date <= todayStr) {
     return [];
   }
