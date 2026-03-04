@@ -4,10 +4,6 @@ const FAQ_ITEMS = [
     a: "Yes, walk-ins are always welcome! However, we highly recommend reserving a table in advance, especially on weekends.",
   },
   {
-    q: "What is your cancellation policy?",
-    a: "We ask for at least 24 hours notice if you need to cancel. Use the link in your confirmation email to cancel online, or call us directly.",
-  },
-  {
     q: "What about large groups?",
     a: "For groups of 8 or more, please call us so we can arrange the best experience for your party. A minimum spend may apply.",
   },
